@@ -3,14 +3,14 @@ import type { Metadata } from 'next'
 
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Container, SSRProvider } from '@/components/bootstrap'
+import { Container } from '@/components/bootstrap'
 import NavBar from './navBar'
 const inter = Inter({ subsets: ['latin'] })
 
 
 export const metadata: Metadata = {
   title: 'Image Gallery',
-  description: 'made with Nextjs',
+  description: 'made with Next Js',
 }
 
 export default function RootLayout({
@@ -21,14 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       < body className={inter.className}>
-        <SSRProvider>
-          <NavBar />
-          <main>
-            <Container className='py-4'>
-              {children}
-            </Container>
-          </main>
-        </SSRProvider>
+
+        <NavBar />
+        <main>
+          <Container className='py-4'>
+            {children}
+          </Container>
+        </main>
+
       </body >
 
 

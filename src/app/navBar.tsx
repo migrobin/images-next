@@ -19,6 +19,9 @@ export default function NavBar() {
                     <Nav>
                         <Nav.Link as={Link} href="/hi" active={pathname === "/hi"}>Hello</Nav.Link>
                     </Nav>
+                    <Nav>
+                        <Nav.Link as={Link} href="/static" active={pathname === "/static"}>Static</Nav.Link>
+                    </Nav>
                 </Navbar.Collapse>
 
 
