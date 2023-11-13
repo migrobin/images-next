@@ -17,10 +17,16 @@ export default function NavBar() {
                 <Navbar.Toggle aria-controls="main-navbar" />
                 <Navbar.Collapse id="main-navbar" >
                     <Nav>
-                        <Nav.Link as={Link} href="/hi" active={pathname === "/hi"}>Hello</Nav.Link>
+                        <Nav.Link as={Link} href="/settimeout" active={pathname === "/settimeout"}>SetTimeout</Nav.Link>
                     </Nav>
                     <Nav>
                         <Nav.Link as={Link} href="/static" active={pathname === "/static"}>Static</Nav.Link>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link as={Link} href="/dynamic" active={pathname === "/dynamic"}>Dynamic</Nav.Link>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link as={Link} href="/incr" active={pathname === "/incr"}>Incremental</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
 
