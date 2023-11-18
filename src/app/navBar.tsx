@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Container, Nav, Navbar } from "react-bootstrap"
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap"
 
 export default function NavBar() {
 
@@ -18,15 +18,13 @@ export default function NavBar() {
                 <Navbar.Collapse id="main-navbar" >
                     <Nav>
                         <Nav.Link as={Link} href="/settimeout" active={pathname === "/settimeout"}>SetTimeout</Nav.Link>
-                    </Nav>
-                    <Nav>
                         <Nav.Link as={Link} href="/static" active={pathname === "/static"}>Static</Nav.Link>
-                    </Nav>
-                    <Nav>
                         <Nav.Link as={Link} href="/dynamic" active={pathname === "/dynamic"}>Dynamic</Nav.Link>
-                    </Nav>
-                    <Nav>
                         <Nav.Link as={Link} href="/incr" active={pathname === "/incr"}>Incremental</Nav.Link>
+                        <NavDropdown title="topics" id="topics-dropdown">
+                            <NavDropdown.Item as={Link} href="/topics/coding">coding</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} href="/topics/apples">apples</NavDropdown.Item>
+                        </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
 

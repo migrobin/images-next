@@ -2,6 +2,7 @@ import { Unsplash } from "@/models/unsplash"
 import { Alert } from "@/components/bootstrap"
 import Image from "next/image"
 import styles from "./TopicPage.module.css"
+import { Metadata } from "next"
 
 
 
@@ -10,7 +11,14 @@ type PageProps = {
     // searchParams:
 }
 
-export const dynamicParams = false // only allow the ues of the generated params apples and coding
+// export const dynamicParams = false // only allow the ues of the generated params apples and coding
+
+export function generateMetadata({ params: { topic } }: PageProps): Metadata {
+    return {
+        title: topic + " - NextJS"
+    }
+}
+
 
 export function generateStaticParams() {
     return ["apples", "coding"].map(topic => ({ topic }))
