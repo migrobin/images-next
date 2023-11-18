@@ -24,11 +24,11 @@ export default async function Page() {
                 src={image.urls.raw}
                 width={width}
                 height={height}
-                alt={image.description}
+                alt={image.alt_description}
                 className="rounded shadow mw-100 h-100"
             />
 
-            by <Link href={"/users" + image.user.username}>{image.user.username}</Link>
+            by <Link href={"https://unsplash.com/@" + image.user.username}>{image.user.username}</Link>
 
         </div>
     )
