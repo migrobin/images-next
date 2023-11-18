@@ -24,7 +24,7 @@ export default async function Page() {
 
     return (
         <div className="d-flex flex-column align-items-center">
-            <Alert> Fetches at every 20 seconds</Alert>
+            <Alert>ISR Fetches at every 20 seconds</Alert>
             <Image
                 src={image.urls.raw}
                 width={width}
